@@ -121,8 +121,8 @@ Board.prototype.validMove = function (pos, color) {
   let x = pos[0];
   let y = pos[1];
   if (this.grid[x][y] !== undefined) return false;
-  for (let i = 0; i < this.DIRS.length; i++) {
-    let dir = this.DIRS[i];
+  for (let i = 0; i < Board.DIRS.length; i++) {
+    let dir = Board.DIRS[i];
     let piecesToFlip = this._positionsToFlip(pos, color, dir, []);
     if (piecesToFlip.length !== 0) return true;
   }
